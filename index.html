@@ -544,6 +544,193 @@
     margin-bottom: 16px;
     text-transform: uppercase;
   }
+
+  /* ═══════════════════════════════════════════════════════
+     MOBILE RESPONSIVE — 768px and below
+  ═══════════════════════════════════════════════════════ */
+  @media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+      padding: 12px 20px;
+    }
+    .nav-label { display: none; }
+    .nav-brand { font-size: 11px; letter-spacing: 2px; }
+
+    /* All sections */
+    section {
+      padding: 80px 24px 60px;
+      min-height: 100vh;
+      justify-content: flex-start;
+    }
+
+    /* Cover */
+    #cover { justify-content: center; padding: 80px 24px 60px; }
+    #cover img { width: 220px !important; }
+    .cover-title { font-size: 36px !important; }
+    .cover-sub { font-size: 9px; letter-spacing: 3px; }
+    .cover-rule { width: 80px; }
+    .cover-scroll { bottom: 20px; }
+
+    /* Headings */
+    h1.display { font-size: 28px !important; line-height: 1.1; }
+    h1.display.on-light { font-size: 28px !important; }
+    h2.section-heading { font-size: 20px; }
+
+    /* Body text */
+    p.body-dark, p.body-light { font-size: 13px; line-height: 1.65; }
+
+    /* All two-column and three-column grids → single column */
+    .two-col,
+    .two-col-wide {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+
+    /* Stat grids */
+    .stat-grid.cols-3,
+    .stat-grid.cols-4 {
+      grid-template-columns: 1fr !important;
+      gap: 2px;
+    }
+    .stat-value { font-size: 26px !important; }
+
+    /* Data tables — make scrollable */
+    .data-table {
+      font-size: 11px;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .data-table th, .data-table td {
+      padding: 8px 10px;
+    }
+
+    /* Deal rows */
+    .deal-row {
+      flex-direction: column;
+      gap: 4px;
+      padding: 10px 0;
+    }
+    .deal-key { flex: none; font-size: 8px; }
+    .deal-val { font-size: 13px; }
+
+    /* Photo grids */
+    .photo-grid.grid-2 { grid-template-columns: 1fr !important; }
+    .photo-grid.grid-2 img { height: 200px; }
+    .photo-grid.grid-1 img { height: 220px; }
+
+    /* Fund bars */
+    .funds-label { flex: 0 0 140px; font-size: 12px; }
+
+    /* Timeline */
+    .timeline { padding-left: 24px; }
+    .timeline-amount { font-size: 18px; }
+
+    /* Step list */
+    .step-item { gap: 12px; }
+    .step-text { font-size: 13px; }
+
+    /* Close quote */
+    .close-quote { font-size: 16px !important; }
+
+    /* Check list */
+    .check-item { font-size: 13px; }
+
+    /* Bottom bar */
+    .bottom-bar {
+      padding: 10px 20px;
+      font-size: 8px;
+      flex-direction: column;
+      gap: 2px;
+      align-items: flex-start;
+    }
+    .bottom-bar.on-light { flex-direction: column; }
+
+    /* Inline grid overrides used throughout */
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: 1.4fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns:1.4fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: 1.2fr 0.8fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns:1.2fr 0.8fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns:1fr 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: repeat(3"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns: repeat(4"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Scenario cards — stack vertically */
+    div[style*="grid-template-columns:1fr 1fr 1fr;gap:3px"] {
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+    }
+
+    /* Video section */
+    video {
+      max-height: 220px !important;
+    }
+
+    /* Brand section poster */
+    #brand img[alt="No Proof brand poster"] {
+      max-height: 360px !important;
+    }
+
+    /* Funds visualization */
+    .funds-item {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .funds-bar-wrap { min-width: 100%; order: 3; }
+    .funds-pct { margin-left: auto; }
+
+    /* Nav dots — smaller */
+    .nav-dot { width: 5px; height: 5px; }
+
+    /* Location/market tables */
+    table { font-size: 11px; }
+    th, td { padding: 6px 8px !important; }
+
+    /* Inline paddings on section-level divs */
+    div[style*="padding:28px"] { padding: 16px !important; }
+    div[style*="padding: 28px"] { padding: 16px !important; }
+    div[style*="padding:20px"] { padding: 14px !important; }
+    div[style*="padding:32px"] { padding: 20px !important; }
+
+    /* Gold rule */
+    .gold-rule, .black-rule { margin: 12px 0 18px; }
+
+    /* Scroll snap — keep but soften on mobile */
+    html { scroll-snap-type: y proximity; }
+  }
+
+  /* ── Very small phones (375px) ── */
+  @media (max-width: 390px) {
+    h1.display { font-size: 24px !important; }
+    .stat-value { font-size: 22px !important; }
+    section { padding: 72px 18px 50px; }
+    nav { padding: 10px 16px; }
+  }
+
 </style>
 </head>
 <body>
